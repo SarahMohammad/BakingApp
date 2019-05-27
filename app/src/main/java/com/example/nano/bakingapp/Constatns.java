@@ -8,4 +8,5 @@ public class Constatns {
     public static final String STEP = "step";
     public static final String SHAREDPREF = "my_pref";
     public static final String WIDGETINGREDIENTS = "widget_ingredients";
+    public static final String STEPSARRAY = "steps_array";
 }

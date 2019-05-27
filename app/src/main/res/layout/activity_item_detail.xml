@@ -13,48 +13,53 @@
     android:orientation="vertical"
     >
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_container"
+        >
     <com.google.android.exoplayer2.ui.PlayerView
         android:id="@+id/video_view"
         app:resize_mode="fit"
         android:layout_width="match_parent"
         android:layout_height="200dp"/>
-
+    </RelativeLayout>
     <TextView
         android:id="@+id/tv_step_short_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:textSize="20sp"
+        android:layout_marginEnd="@dimen/text_margin"
+        android:layout_marginStart="@dimen/text_margin"
+        android:layout_marginTop="@dimen/text_margin"
+        android:textSize="@dimen/twenty_sp"
         android:textStyle="bold"
-        tools:text="mmmm" />
+        />
 
     <TextView
         android:id="@+id/tv_step_description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        tools:text="oooo" />
+        android:layout_marginEnd="@dimen/text_margin"
+        android:layout_marginStart="@dimen/text_margin"
+        android:layout_marginTop="@dimen/text_margin"
+        />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="@dimen/forty_dp"
         >
         <Button
             android:layout_width="0dp"
-            android:text="previous"
+            android:text="@string/prev"
             android:id="@+id/previous_btn"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>
         <Button
             android:layout_width="0dp"
-            android:text="next"
+            android:text="@string/next"
             android:id="@+id/next_btn"
             android:layout_height="wrap_content"
             android:layout_weight="1"/>

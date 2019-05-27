@@ -46,7 +46,7 @@ public class RecipesActivity extends AppCompatActivity {
                 if (response.isSuccessful() && response.code() == 200) {
 
                     //find if it was a tablet
-                    if (findViewById(R.id.item_detail_container) != null) {
+                    if (findViewById(R.id.tabmode_layout) != null) {
                         recipiesRecyclerView.setLayoutManager(new GridLayoutManager(RecipesActivity.this , 4));
                         recipiesRecyclerView.setAdapter(new RecipesAdapter(RecipesActivity.this, response.body()));
                     }else{
@@ -54,8 +54,6 @@ public class RecipesActivity extends AppCompatActivity {
                         recipiesRecyclerView.setAdapter(new RecipesAdapter(RecipesActivity.this, response.body()));
                     }
 
-                } else {
-                    Toast.makeText(RecipesActivity.this,"else", Toast.LENGTH_SHORT).show();
                 }
             }
 

@@ -56,18 +56,14 @@ public class RecipesAdapter extends RecyclerView.Adapter<RecipesAdapter.ViewHold
             @Override
             public void onClick(View view) {
                 //save the ingredients in shared to view in the widget
-
                 editor.putString(Constatns.WIDGETINGREDIENTS , gson.toJson(recipes.get(position).getIngredients()));
-                editor.apply();
+                editor.commit();
 
                 Intent i = new Intent(mContext , StepsListActivity.class);
                 i.putExtra(Constatns.STEPS_LIST, recipes.get(position));
                 mContext.startActivity(i);
-
-
             }
         });
-//        Picasso.with(mContext).load(iconUrl).into(holder.weatherIconIv);
     }
 
     @Override

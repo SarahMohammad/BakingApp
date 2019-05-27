@@ -49,7 +49,6 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, @SuppressLint("RecyclerView") final int position) {
-//            holder.mIdView.setText(mValues.get(position).id);
         if(position == 0){
             holder.mStepName.setText(Constatns.INGREDIENTS);
 
@@ -58,7 +57,6 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
 
         }
 
-        holder.itemView.setTag(mValues.get(position));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,7 +74,7 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
                     }else{
                         //inflate the step fragment to view the video
                         arguments.putParcelable(Constatns.STEP , mValues.get(position-1));
-                        arguments.putParcelableArrayList("steps_array" , mValues);
+                        arguments.putParcelableArrayList(Constatns.STEPSARRAY , mValues);
                         RecipeInfoDetailFragment fragment = new RecipeInfoDetailFragment();
                         fragment.setArguments(arguments);
                         mParentActivity.getSupportFragmentManager().beginTransaction()
@@ -97,7 +95,7 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
                         Intent intent = new Intent(view.getContext(), StepDetailActivity.class);
                         //send video details
                         intent.putExtra(Constatns.STEP , mValues.get(position-1));
-                        intent.putExtra("steps_array", mValues);
+                        intent.putExtra(Constatns.STEPSARRAY, mValues);
                         view.getContext().startActivity(intent);
                     }
 
@@ -108,16 +106,14 @@ public class StepsAdapter extends RecyclerView.Adapter<StepsAdapter.ViewHolder> 
 
     @Override
     public int getItemCount() {
-        return mValues.size();
+        return mValues.size()+1;
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {
-//        final TextView mIdView;
         TextView mStepName;
 
         ViewHolder(View view) {
             super(view);
-//            mIdView =  view.findViewById(R.id.id_text);
             mStepName = view.findViewById(R.id.step_tv);
         }
     }

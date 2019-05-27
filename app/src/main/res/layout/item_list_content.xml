@@ -7,16 +7,15 @@
 
     <TextView
         android:id="@+id/step_tv"
-        android:text="ddd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="@dimen/ten_dp"
         android:textColor="@android:color/black"
-        android:textSize="20sp"
+        android:textSize="@dimen/twenty_sp"
         android:textAppearance="?attr/textAppearanceListItem" />
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="@dimen/three_dp"
         android:background="@android:color/darker_gray"
         />
 </LinearLayout>

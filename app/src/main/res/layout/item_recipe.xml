@@ -7,14 +7,14 @@
 
     <TextView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="@dimen/card_height"
         android:id="@+id/recipe_name"
-        android:layout_margin="10dp"
-        android:background="@android:color/holo_orange_dark"
+        android:layout_margin="@dimen/ten_dp"
+        android:textColor="@color/colorAccent"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintTop_toTopOf="parent"
         android:gravity="center"
-        android:text="ssss"
-        android:textSize="25sp"
+        android:textSize="@dimen/twentyfive_sp"
         />
 
 </android.support.constraint.ConstraintLayout>

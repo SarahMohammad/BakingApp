@@ -8,16 +8,15 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="fldk"
-        android:padding="8dp"
+        android:padding="@dimen/eight_dp"
         android:layout_centerInParent="true"
-        android:textSize="17sp"
+        android:textSize="@dimen/seventeen_sp"
         android:id="@+id/ingredient_tv"
         />
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="3dp"
+        android:layout_height="@dimen/three_dp"
         android:layout_alignParentBottom="true"
         android:background="@android:color/darker_gray"
         />
